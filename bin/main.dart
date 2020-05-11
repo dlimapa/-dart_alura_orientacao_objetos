@@ -1,27 +1,21 @@
 void main() {
-  ContaCorrente contaCorrente;
-  String nome = "Gabriel";
+  ContaCorrente contaAmanda = ContaCorrente();
 
-  print(contaCorrente);
-  print(nome);
+  contaAmanda.titular = "Amanda";
+  contaAmanda.agencia = 123;
+  contaAmanda.conta = 1;
+  //nao precisar iniciar, pois há valor default
+  //contaAmanda.saldo = 0.0;
 
-  contaCorrente = ContaCorrente();
+  print("titular: ${contaAmanda.titular}");
 
-  print(contaCorrente);
-
-  contaCorrente.titular = "Daniel";
-  contaCorrente.agencia = 123;
-  contaCorrente.conta = 12345;
-  contaCorrente.saldo = 10.12;
-
-  print("Titular: ${contaCorrente.titular}");
-
-  print(contaCorrente.toString());
+  print("saldo: ${contaAmanda.saldo}");
 }
 
 class ContaCorrente {
   String titular;
   int agencia;
   int conta;
-  double saldo;
+  //valor padrão do saldo deve ser zero
+  double saldo = 0.0;
 }
