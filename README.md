@@ -11,3 +11,7 @@ https://cursos.alura.com.br/course/dart-orientacao-objetos
 ## Certificado
 
 Pasta docs
+
+## IDE
+
+Visual Studio Code
