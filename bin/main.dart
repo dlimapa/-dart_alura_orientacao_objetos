@@ -1,29 +1,18 @@
 void main() {
-  ContaCorrente conta1 = ContaCorrente();
-  ContaCorrente conta2 = ContaCorrente();
+  ContaCorrente contaAmanda = ContaCorrente();
 
-  conta1.titular = "felipe";
-  conta1.agencia = 1;
-  conta1.conta = 123;
+  contaAmanda.titular = "Amanda";
 
-  conta2.titular = "felipe";
-  conta2.agencia = 1;
-  conta2.conta = 123;
+  double saque = 180;
 
-  print(conta1 == conta2);
-  print(conta1.titular == conta2.titular);
-  print(conta1.agencia == conta2.agencia);
-  print(conta1.conta == conta2.conta);
+  if (contaAmanda.saldo - saque < -100) {
+    print("sem saldo insuficiente");
+  } else {
+    print("sacando");
+    contaAmanda.saldo -= saque;
+  }
 
-  print(conta1.hashCode);
-  print(conta2.hashCode);
-
-  conta1 = conta2;
-
-  print(conta1.hashCode);
-  print(conta2.hashCode);
-
-  print(conta1 == conta2);
+  print("saldo da ${contaAmanda.titular}: ${contaAmanda.saldo}");
 }
 
 class ContaCorrente {
@@ -31,5 +20,5 @@ class ContaCorrente {
   int agencia;
   int conta;
   //valor padrão do saldo deve ser zero
-  double saldo = 0.0;
+  double saldo = 20.0;
 }
