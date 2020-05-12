@@ -1,15 +1,29 @@
 void main() {
-  ContaCorrente contaAmanda = ContaCorrente();
+  ContaCorrente conta1 = ContaCorrente();
+  ContaCorrente conta2 = ContaCorrente();
 
-  contaAmanda.titular = "Amanda";
-  contaAmanda.agencia = 123;
-  contaAmanda.conta = 1;
-  //nao precisar iniciar, pois há valor default
-  //contaAmanda.saldo = 0.0;
+  conta1.titular = "felipe";
+  conta1.agencia = 1;
+  conta1.conta = 123;
 
-  print("titular: ${contaAmanda.titular}");
+  conta2.titular = "felipe";
+  conta2.agencia = 1;
+  conta2.conta = 123;
 
-  print("saldo: ${contaAmanda.saldo}");
+  print(conta1 == conta2);
+  print(conta1.titular == conta2.titular);
+  print(conta1.agencia == conta2.agencia);
+  print(conta1.conta == conta2.conta);
+
+  print(conta1.hashCode);
+  print(conta2.hashCode);
+
+  conta1 = conta2;
+
+  print(conta1.hashCode);
+  print(conta2.hashCode);
+
+  print(conta1 == conta2);
 }
 
 class ContaCorrente {
